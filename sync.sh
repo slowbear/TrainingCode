@@ -1,3 +1,3 @@
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/github
-git push && hub sync
+hub sync
