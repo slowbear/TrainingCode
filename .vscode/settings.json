@@ -1,0 +1,29 @@
+{
+  "files.associations": {
+    "*.json": "jsonc",
+    "cstdio": "cpp",
+    "bitset": "cpp",
+    "cstdint": "cpp",
+    "cmath": "cpp",
+    "cstdarg": "cpp",
+    "cstddef": "cpp",
+    "cstdlib": "cpp",
+    "type_traits": "cpp",
+    "limits": "cpp",
+    "*.tcc": "cpp",
+    "cinttypes": "cpp",
+    "typeinfo": "cpp",
+    "iostream": "cpp",
+    "cassert": "cpp",
+    "cstring": "cpp",
+    "stdio.h": "c",
+    "complex": "cpp",
+    "algorithm": "cpp",
+    "vector": "cpp",
+    "unordered_map": "cpp",
+    "new": "cpp",
+    "ostream": "cpp",
+    "queue": "cpp",
+    "stack": "cpp"
+  }
+}

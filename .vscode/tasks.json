@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Debug Build",
+      "command": "g++",
+      "args": [
+        "-g3",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/Debug/${fileBasenameNoExtension}"
+      ],
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "Release Build",
+      "command": "g++",
+      "args": [
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/Release/${fileBasenameNoExtension}"
+      ],
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    }
+  ]
+}
