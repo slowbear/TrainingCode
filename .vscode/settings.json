@@ -25,5 +25,8 @@
     "ostream": "cpp",
     "queue": "cpp",
     "stack": "cpp"
-  }
+  },
+  "lldb.showDisassembly": "never",
+  "lldb.dereferencePointers": false,
+  "lldb.displayFormat": "auto"
 }

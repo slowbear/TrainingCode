@@ -4,7 +4,7 @@
     {
       "type": "shell",
       "label": "Debug Build",
-      "command": "g++",
+      "command": "clang++",
       "args": [
         "-g3",
         "-std=c++17",
@@ -20,7 +20,7 @@
     {
       "type": "shell",
       "label": "Release Build",
-      "command": "g++",
+      "command": "clang++",
       "args": [
         "-std=c++17",
         "-O2",
