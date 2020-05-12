@@ -1,5 +1,6 @@
-/Debug/*
-/Release/*
+/Debug/
+/Release/
+/Test/
 *.in
 *.out
 *.ans
