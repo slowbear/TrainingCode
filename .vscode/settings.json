@@ -76,7 +76,11 @@
     "thread": "cpp",
     "tuple": "cpp",
     "utility": "cpp",
-    "memory_resource": "cpp"
+    "memory_resource": "cpp",
+    "compare": "cpp",
+    "concepts": "cpp",
+    "ranges": "cpp",
+    "stop_token": "cpp"
   },
   "lldb.showDisassembly": "never",
   "lldb.dereferencePointers": false,
