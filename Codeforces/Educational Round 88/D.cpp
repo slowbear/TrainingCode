@@ -7,7 +7,7 @@
 #include <vector>
 using namespace std;
 
-constexpr int MAX_N = 101000;
+constexpr int MAX_N = 201000;
 
 int a[MAX_N];
 
@@ -33,11 +33,12 @@ int main() {
   prefix[0] = 0;
   log_2[1] = 0;
   for (int i = 2; i < MAX_N; ++i) log_2[i] = log_2[i / 2] + 1;
+  for (int j = 0; j < 20; ++j) st_prefix_max[0][j] = st_prefix_min[0][j] = 0;
   for (int i = 1; i <= n; ++i) {
     prefix[i] = prefix[i - 1] + a[i];
     st_prefix_max[i][0] = prefix[i];
     st_prefix_min[i][0] = prefix[i];
-    for (int j = 1; (j < 20) && (i > (1 << (j - 1))); ++j) {
+    for (int j = 1; (j < 20) && (i >= (1 << (j - 1))); ++j) {
       st_prefix_max[i][j] = max(st_prefix_max[i][j - 1],
                                 st_prefix_max[i - (1 << (j - 1))][j - 1]);
       st_prefix_min[i][j] = min(st_prefix_min[i][j - 1],
