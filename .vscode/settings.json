@@ -83,7 +83,7 @@
     "stop_token": "cpp",
     "unordered_set": "cpp"
   },
-  "lldb.showDisassembly": "never",
+  "lldb.showDisassembly": "auto",
   "lldb.dereferencePointers": false,
   "lldb.displayFormat": "auto"
 }

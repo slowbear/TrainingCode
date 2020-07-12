@@ -14,8 +14,10 @@
         "-o",
         "${workspaceFolder}/Debug/${fileBasenameNoExtension}"
       ],
-      "problemMatcher": ["$gcc"],
-      "group": "build"
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     },
     {
       "type": "shell",
@@ -29,7 +31,6 @@
         "-o",
         "${workspaceFolder}/Release/${fileBasenameNoExtension}"
       ],
-      "problemMatcher": ["$gcc"],
       "group": "build"
     }
   ]

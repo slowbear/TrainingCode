@@ -9,27 +9,6 @@
       "args": [],
       "preLaunchTask": "Debug Build",
       "cwd": "${workspaceFolder}"
-    },
-    {
-      "name": "Debug with GDB",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${workspaceFolder}/Debug/${fileBasenameNoExtension}",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "为 gdb 启用整齐打印",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "Debug Build",
-      "miDebuggerPath": "/usr/bin/gdb"
     }
   ]
 }
