@@ -25,8 +25,7 @@ void dfs(int cur, int end, long long sum, long long base, int state) {
 
 int ans[42], last;
 
-bool check_dfs(int cur, int end, long long sum, long long base,
-               long long state) {
+bool check_dfs(int cur, int end, long long sum, long long base, long long state) {
   if (cur == end) {
     if (keep.find(p - sum) != keep.end()) {
       state = state | keep[p - sum];
@@ -41,8 +40,7 @@ bool check_dfs(int cur, int end, long long sum, long long base,
     }
   }
   if (!check_dfs(cur + 1, end, (sum + base) % p, (base * 10) % p, state)) {
-    return check_dfs(cur + 1, end, (sum + 2 * base) % p, (base * 10) % p,
-                     state | (1LL << cur));
+    return check_dfs(cur + 1, end, (sum + 2 * base) % p, (base * 10) % p, state | (1LL << cur));
   } else {
     return true;
   }

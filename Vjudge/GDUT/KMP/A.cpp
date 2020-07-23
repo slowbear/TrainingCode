@@ -43,8 +43,7 @@ int main() {
         bool flag = true;
         char backup = str[0][i + size];
         str[0][i + size] = '\0';
-        for (int j = 1; (flag) && (j < n); ++j)
-          flag = contain(str[j], str[0] + i);
+        for (int j = 1; (flag) && (j < n); ++j) flag = contain(str[j], str[0] + i);
         if (flag) {
           if (strlen(str[0] + i) > strlen(ans)) {
             strcpy(ans, str[0] + i);

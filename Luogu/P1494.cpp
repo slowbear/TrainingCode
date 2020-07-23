@@ -84,6 +84,5 @@ int main() {
       ans[query[i].index] = make_pair(0LL, 1LL);
     }
   }
-  for (int i = 0; i < m; ++i)
-    printf("%lld/%lld\n", ans[i].first, ans[i].second);
+  for (int i = 0; i < m; ++i) printf("%lld/%lld\n", ans[i].first, ans[i].second);
 }

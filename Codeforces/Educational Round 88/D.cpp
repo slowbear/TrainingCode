@@ -11,8 +11,7 @@ constexpr int MAX_N = 201000;
 
 int a[MAX_N];
 
-int ex[MAX_N][2], prefix[MAX_N], st_prefix_min[MAX_N][20],
-    st_prefix_max[MAX_N][20];
+int ex[MAX_N][2], prefix[MAX_N], st_prefix_min[MAX_N][20], st_prefix_max[MAX_N][20];
 
 int log_2[MAX_N];
 
@@ -39,10 +38,8 @@ int main() {
     st_prefix_max[i][0] = prefix[i];
     st_prefix_min[i][0] = prefix[i];
     for (int j = 1; (j < 20) && (i >= (1 << (j - 1))); ++j) {
-      st_prefix_max[i][j] = max(st_prefix_max[i][j - 1],
-                                st_prefix_max[i - (1 << (j - 1))][j - 1]);
-      st_prefix_min[i][j] = min(st_prefix_min[i][j - 1],
-                                st_prefix_min[i - (1 << (j - 1))][j - 1]);
+      st_prefix_max[i][j] = max(st_prefix_max[i][j - 1], st_prefix_max[i - (1 << (j - 1))][j - 1]);
+      st_prefix_min[i][j] = min(st_prefix_min[i][j - 1], st_prefix_min[i - (1 << (j - 1))][j - 1]);
     }
   }
   stack<int> st;

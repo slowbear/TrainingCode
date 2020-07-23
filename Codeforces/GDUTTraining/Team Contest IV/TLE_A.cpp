@@ -66,8 +66,7 @@ int main() {
   for (int i = 1; i < MAX_M; ++i) rt[i][0] = build(0, i);
   for (int i = 1; i <= n; ++i) {
     rt[0][i] = delta_add(rt[0][i - 1], init_val[i], 1);
-    for (int j = 1; j < MAX_M; ++j)
-      rt[j][i] = delta_add(rt[j][i - 1], init_val[i] % j, 1);
+    for (int j = 1; j < MAX_M; ++j) rt[j][i] = delta_add(rt[j][i - 1], init_val[i] % j, 1);
   }
   while (q--) {
     int l, r, m, x;
@@ -76,8 +75,7 @@ int main() {
       printf("%d\n", query(rt[m][r], x) - query(rt[m][l - 1], x));
     } else {
       int ans = 0;
-      for (int i = x; i < MAX_N; i += m)
-        ans += query(rt[0][r], i) - query(rt[0][l - 1], i);
+      for (int i = x; i < MAX_N; i += m) ans += query(rt[0][r], i) - query(rt[0][l - 1], i);
       printf("%d\n", ans);
     }
   }

@@ -88,8 +88,7 @@ void pushdown(int root) {
     update(node[root].rc, node[root].lazy);
     node[root].lazy = 0;
   } else {
-    if (depth[node[root].lazy] > depth[node[root].val])
-      node[root].val = node[root].lazy;
+    if (depth[node[root].lazy] > depth[node[root].val]) node[root].val = node[root].lazy;
   }
 }
 
@@ -179,6 +178,5 @@ int main() {
       change(root, step_in[u], step_out[u], u);
     }
   }
-  for (auto it = vec_ans.rbegin(); it != vec_ans.rend(); ++it)
-    printf("%d\n", *it);
+  for (auto it = vec_ans.rbegin(); it != vec_ans.rend(); ++it) printf("%d\n", *it);
 }
