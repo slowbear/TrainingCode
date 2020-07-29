@@ -1,7 +1,6 @@
-/Debug/
-/Release/
 /Misc/
 *.in
 *.out
 *.ans
+*.txt
 Standard*.cpp
