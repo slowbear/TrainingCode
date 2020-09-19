@@ -7,12 +7,12 @@ AlignConsecutiveMacros: false
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
 AlignEscapedNewlines: Left
-AlignOperands: true
+AlignOperands: Align
 AlignTrailingComments: true
 AllowAllArgumentsOnNextLine: true
 AllowAllConstructorInitializersOnNextLine: true
 AllowAllParametersOfDeclarationOnNextLine: true
-AllowShortBlocksOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
 AllowShortCaseLabelsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: All
 AllowShortLambdasOnASingleLine: All
@@ -27,7 +27,7 @@ BinPackParameters: true
 BraceWrapping:
   AfterCaseLabel: false
   AfterClass: false
-  AfterControlStatement: false
+  AfterControlStatement: Never
   AfterEnum: false
   AfterFunction: false
   AfterNamespace: false
@@ -50,13 +50,14 @@ BreakConstructorInitializersBeforeComma: false
 BreakConstructorInitializers: BeforeColon
 BreakAfterJavaFieldAnnotations: false
 BreakStringLiterals: true
-ColumnLimit: 100
+ColumnLimit: 80
 CommentPragmas: "^ IWYU pragma:"
 CompactNamespaces: false
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
 ConstructorInitializerIndentWidth: 4
 ContinuationIndentWidth: 4
 Cpp11BracedListStyle: true
+DeriveLineEnding: true
 DerivePointerAlignment: true
 DisableFormat: false
 ExperimentalAutoDetectBinPacking: false
@@ -69,14 +70,20 @@ IncludeBlocks: Regroup
 IncludeCategories:
   - Regex: '^<ext/.*\.h>'
     Priority: 2
+    SortPriority: 0
   - Regex: '^<.*\.h>'
     Priority: 1
+    SortPriority: 0
   - Regex: "^<.*"
     Priority: 2
+    SortPriority: 0
   - Regex: ".*"
     Priority: 3
+    SortPriority: 0
 IncludeIsMainRegex: "([-_](test|unittest))?$"
+IncludeIsMainSourceRegex: ""
 IndentCaseLabels: true
+IndentGotoLabels: true
 IndentPPDirectives: None
 IndentWidth: 2
 IndentWrappedFunctionNames: false
@@ -140,18 +147,20 @@ SpaceBeforeCtorInitializerColon: true
 SpaceBeforeInheritanceColon: true
 SpaceBeforeParens: ControlStatements
 SpaceBeforeRangeBasedForLoopColon: true
+SpaceInEmptyBlock: false
 SpaceInEmptyParentheses: false
 SpacesBeforeTrailingComments: 2
 SpacesInAngles: false
+SpacesInConditionalStatement: false
 SpacesInContainerLiterals: true
 SpacesInCStyleCastParentheses: false
 SpacesInParentheses: false
 SpacesInSquareBrackets: false
+SpaceBeforeSquareBrackets: false
 Standard: Auto
 StatementMacros:
   - Q_UNUSED
   - QT_REQUIRE_VERSION
 TabWidth: 8
+UseCRLF: false
 UseTab: Never
----
-
