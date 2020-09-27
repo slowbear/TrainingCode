@@ -2,5 +2,6 @@
 *.in
 *.out
 *.ans
-*.txt
-Standard*.cpp
+*.ll
+*.s
+*.out

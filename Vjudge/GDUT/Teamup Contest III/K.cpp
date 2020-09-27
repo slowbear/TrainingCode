@@ -1,5 +1,4 @@
 // TODO: Fixed calculate error.
-#error unfinished
 #include <bits/stdc++.h>
 using namespace std;
 using LL = long long;
@@ -48,9 +47,9 @@ ULL cnt_prefix(ULL x) {
   ULL ans = 0, cur = cnt(x);
   while (x) {
     ULL new_x = x & (x - 1);
+    ++ans;
     ans += (x - new_x) * (--cur) % p;
     ans %= p;
-    // printf("%llu\n", count_zero(x - new_x));
     ans += (x - new_x) * ni[2] % p * count_zero(x - new_x) % p;
     ans %= p;
     x = new_x;
@@ -59,30 +58,43 @@ ULL cnt_prefix(ULL x) {
 }
 
 ULL cnt_lca_prefix(ULL x) {
-  ULL ans = 0, cur = cnt(x);
-  while (x) {
-    ULL new_x = x & (x - 1);
-    ans += (x - new_x) * (--cur) % p;
-    ans %= p;
-    ULL b = count_zero(x - new_x);
-    b = b * (b - 1) % p;
-    ans += (x - new_x) * b % p * ni[4] % p;
-    x = new_x;
+  // ULL ans = 0, cur = cnt(x);
+  // while (x) {
+  //   ULL new_x = x & (x - 1);
+  //   ans += (x - new_x) * (--cur) % p;
+  //   ans %= p;
+  //   ULL b = count_zero(x - new_x);
+  //   b = b * (b - 1) % p;
+  //   ans += (x - new_x) * b % p * ni[8] % p;
+  //   x = new_x;
+  // }
+  // return ans;
+  ULL ans = 0;
+  rev(i, 0, 63) {
+    ULL cur = 1ULL << i;
+    if (cur & x) {
+      ULL b = count_zero(cur);
+      b = b * (b - 1) * ni[8] % p;
+      ans = (ans + cur % p * b % p) % p;
+      x ^= cur;
+      ans = (ans + cur) % p;
+    }
   }
   return ans;
 }
 
 int main() {
-  rep(i, 1, 16) printf("f(%d)=%llu\n", i, cnt_prefix(i));
-  // int T;
-  // scanf("%d", &T);
   // init();
-  // rep(i, 1, T + 1) {
-  //   ULL n;
-  //   scanf("%llu", &n);
-  //   ULL ans = n % p * cnt_prefix(n) % p;
-  //   ans -= 2 * cnt_lca_prefix(n) % p;
-  //   ans = (ans % p + p) % p;
-  //   printf("Case #%d: %llu\n", i, ans);
-  // }
+  // rep(i, 1, 100) printf("f(%d)=%llu\n", i, cnt_prefix(i));
+  int T;
+  scanf("%d", &T);
+  init();
+  rep(i, 1, T + 1) {
+    ULL n;
+    scanf("%llu", &n);
+    ULL ans = n % p * cnt_prefix(n) % p;
+    ans -= 2 * cnt_lca_prefix(n + 1) % p;
+    ans = (ans % p + p) % p;
+    printf("Case #%d: %llu\n", i, ans);
+  }
 }

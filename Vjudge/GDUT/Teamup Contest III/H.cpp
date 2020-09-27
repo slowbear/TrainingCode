@@ -25,8 +25,7 @@ void pre_kmp(int str[], int len) {
   f[1] = 0;
   rep(i, 1, len) {
     int j = f[i];
-    while (j && (str[i] != str[j]))
-      j = f[j];
+    while (j && (str[i] != str[j])) j = f[j];
     f[i + 1] = (str[i] == str[j] ? j + 1 : 0);
   }
 }
@@ -34,12 +33,9 @@ void pre_kmp(int str[], int len) {
 int kmp(int str[], int sub[], int len, int target) {
   int j = 0, ans = 0;
   rep(i, 0, len) {
-    while (j && (str[i] != sub[j]))
-      j = f[j];
-    if (str[i] == sub[j])
-      ++j;
-    if (j == target)
-      ++ans;
+    while (j && (str[i] != sub[j])) j = f[j];
+    if (str[i] == sub[j]) ++j;
+    if (j == target) ++ans;
   }
   return ans;
 }
