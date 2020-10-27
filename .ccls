@@ -4,3 +4,4 @@ clang
 -Wall
 -Wextra
 -DDEBUG
+--gcc-toolchain=/usr
