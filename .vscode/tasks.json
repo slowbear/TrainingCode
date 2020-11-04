@@ -19,6 +19,9 @@
       "group": {
         "kind": "build",
         "isDefault": true
+      },
+      "presentation": {
+        "clear": true
       }
     },
     {
@@ -33,7 +36,10 @@
         "-o",
         "${workspaceFolder}/Release/${fileBasenameNoExtension}"
       ],
-      "group": "build"
+      "group": "build",
+      "presentation": {
+        "clear": true
+      }
     }
   ]
 }
