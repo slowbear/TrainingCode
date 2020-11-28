@@ -8,7 +8,7 @@
       "args": [
         "-g3",
         "-std=c++2a",
-        "-fsanitize=undefined",
+        // "-fsanitize=undefined",
         "-Wall",
         "-DDEBUG",
         "-Wextra",
