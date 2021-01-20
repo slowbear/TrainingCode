@@ -3,12 +3,49 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "Debug Build",
+      "label": "Debug Build(Pure C)",
+      "command": "gcc",
+      "args": [
+        "-g3",
+        "-std=c17",
+        "-Wall",
+        "-DDEBUG",
+        "-Wextra",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/Debug/${fileBasenameNoExtension}"
+      ],
+      "group": "build",
+      "presentation": {
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Release Build(Pure C)",
+      "command": "gcc",
+      "args": [
+        "-std=c17",
+        "-O2",
+        "-Wall",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/Release/${fileBasenameNoExtension}"
+      ],
+      "group": "build",
+      "presentation": {
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Debug Build(C++)",
       "command": "clang++",
       "args": [
         "-g3",
         "-std=c++2a",
-        // "-fsanitize=undefined",
         "-Wall",
         "-DDEBUG",
         "-Wextra",
@@ -22,11 +59,12 @@
       },
       "presentation": {
         "clear": true
-      }
+      },
+      "problemMatcher": []
     },
     {
       "type": "shell",
-      "label": "Release Build",
+      "label": "Release Build(C++)",
       "command": "clang++",
       "args": [
         "-std=c++2a",
@@ -39,7 +77,8 @@
       "group": "build",
       "presentation": {
         "clear": true
-      }
+      },
+      "problemMatcher": []
     }
   ]
 }

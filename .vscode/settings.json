@@ -84,6 +84,6 @@
     "unordered_set": "cpp"
   },
   "lldb.showDisassembly": "auto",
-  "lldb.dereferencePointers": false,
+  "lldb.dereferencePointers": true,
   "lldb.displayFormat": "auto"
 }

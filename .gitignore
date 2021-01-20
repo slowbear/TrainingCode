@@ -1,8 +1,8 @@
 /Misc/
+*.s
 *.in
 *.out
 *.ans
 *.ll
-*.s
-*.out
-.ccls-cache
+*.txt
+*.cache

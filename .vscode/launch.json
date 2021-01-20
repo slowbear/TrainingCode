@@ -7,7 +7,7 @@
       "request": "launch",
       "program": "${workspaceFolder}/Debug/${fileBasenameNoExtension}",
       "args": [],
-      "preLaunchTask": "Debug Build",
+      "preLaunchTask": "Debug Build(C++)",
       "cwd": "${workspaceFolder}"
     }
   ]
