@@ -1,0 +1,19 @@
+{
+  "name": "Ubuntu",
+  "dockerComposeFile": ["./docker-compose.yml"],
+  "service": "dev",
+  "workspaceFolder": "/workspace/TrainingCode",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "remoteUser": "vscode",
+  "extensions": [
+    "llvm-vs-code-extensions.vscode-clangd",
+    "vadimcn.vscode-lldb",
+    "vtrois.gitmoji-vscode",
+    "mhutchie.git-graph",
+    "esbenp.prettier-vscode"
+  ]
+  // "forwardPorts": [],
+  // "postCreateCommand": "",
+}
