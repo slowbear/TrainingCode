@@ -4,7 +4,10 @@
   "service": "dev",
   "workspaceFolder": "/workspace/TrainingCode",
   "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "[cpp]": {
+      "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    }
   },
   "remoteUser": "vscode",
   "extensions": [
