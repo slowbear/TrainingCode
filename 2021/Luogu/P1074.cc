@@ -121,13 +121,11 @@ int main() {
   rep(i, 0, 9) rep(j, 0, 9) scanf("%d", &a[i][j]);
   build(729, 324);
   rep(i, 0, 9) rep(j, 0, 9) {
-    rep(x, 1, 10) {
-      if (!a[i][j] || (a[i][j] == x)) {
-        insert(81 * i + 9 * j + x, 9 * i + x);
-        insert(81 * i + 9 * j + x, 9 * j + 81 + x);
-        insert(81 * i + 9 * j + x, 9 * get_block(i, j) + 162 + x);
-        insert(81 * i + 9 * j + x, 9 * i + j + 244);
-      }
+    rep(x, 1, 10) if (!a[i][j] || (a[i][j] == x)) {
+      insert(81 * i + 9 * j + x, 9 * i + x);
+      insert(81 * i + 9 * j + x, 9 * j + 81 + x);
+      insert(81 * i + 9 * j + x, 9 * get_block(i, j) + 162 + x);
+      insert(81 * i + 9 * j + x, 9 * i + j + 244);
     }
   }
   score = -1;

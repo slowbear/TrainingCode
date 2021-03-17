@@ -14,3 +14,15 @@ using VP = vector<pair<int, int>>;
 #define SZ(V) static_cast<int>(V.size())
 #define pb push_back
 #define mp make_pair
+
+int main() {
+  int T;
+  scanf("%d", &T);
+  while (T--) {
+    double h, w;
+    scanf("%lf%lf", &h, &w);
+    double sw = (h - 100) * 1.8;
+    puts((abs(sw - w) < 0.1 * sw) ? "You are wan mei!"
+                                  : (w > sw ? "You are tai pang le!" : "You are tai shou le!"));
+  }
+}
