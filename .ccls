@@ -1,7 +1,0 @@
-clang
-%c -std=c11
-%cpp -std=c++2a
--Wall
--Wextra
--DDEBUG
---gcc-toolchain=/usr

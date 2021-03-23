@@ -12,6 +12,8 @@
         "-DDEBUG",
         "-Wextra",
         "${file}",
+        "-pthread",
+        "-lm",
         "-o",
         "${workspaceFolder}/Debug/${fileBasenameNoExtension}"
       ],
@@ -31,6 +33,8 @@
         "-s",
         "-Wall",
         "${file}",
+        "-pthread",
+        "-lm",
         "-o",
         "${workspaceFolder}/Release/${fileBasenameNoExtension}"
       ],
@@ -51,6 +55,8 @@
         "-DDEBUG",
         "-Wextra",
         "${file}",
+        "-pthread",
+        "-lm",
         "-o",
         "${workspaceFolder}/Debug/${fileBasenameNoExtension}"
       ],
@@ -73,6 +79,8 @@
         "-s",
         "-Wall",
         "${file}",
+        "-pthread",
+        "-lm",
         "-o",
         "${workspaceFolder}/Release/${fileBasenameNoExtension}"
       ],
