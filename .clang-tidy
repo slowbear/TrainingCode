@@ -1,2 +1,2 @@
 ---
-Checks: "clang-diagnostic-*,clang-analyzer-*,misc-*,performance-*"
+Checks: "clang-diagnostic-*,clang-analyzer-*,google-*,performance-*"

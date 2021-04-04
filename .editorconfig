@@ -6,9 +6,10 @@ end_of_line = lf
 
 [*.cc]
 indent_size = 2
+indent_style = space
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.txt]
+[*.{txt,md}]
 trim_trailing_whitespace = false
 insert_final_newline = false
