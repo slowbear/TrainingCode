@@ -1,14 +1,33 @@
 {
-  "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug with LLDB",
-      "type": "lldb",
-      "request": "launch",
-      "program": "${workspaceFolder}/Debug/${fileBasenameNoExtension}",
+      "MIMode": "gdb",
       "args": [],
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "name": "Debug with GDB",
+      "program": "${workspaceFolder}/Debug/${fileBasenameNoExtension}",
+      "request": "launch",
+      "stopAtEntry": false,
+      "setupCommands": [
+        {
+          "description": "为 gdb 启用整齐打印",
+          "ignoreFailures": true,
+          "text": "-enable-pretty-printing"
+        }
+      ],
+      "type": "cppdbg"
+    },
+    {
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "name": "Debug with LLDB",
+      "program": "${workspaceFolder}/Debug/${fileBasenameNoExtension}",
       "preLaunchTask": "Debug Build(C++)",
-      "cwd": "${workspaceFolder}"
+      "request": "launch",
+      "type": "lldb"
     }
-  ]
+  ],
+  "version": "0.2.0"
 }
